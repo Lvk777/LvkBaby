@@ -1,40 +1,166 @@
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Lvk777/LvkBaby/main/Library'))()
 
 -- // Window \\ --
-local window = library.new('leadmarker is so hot', 'leadmarker')
+local window = library.new('LvkBaby - Aftermath', 'Lvk')
 
 -- // Tabs \\ --
-local tab = window.new_tab('rbxassetid://4483345998')
-local tab1 = window.new_tab('rbxassetid://4483345998')
+local tab = window.new_tab('rbxassetid://136314189311339')
+local tab1 = window.new_tab('rbxassetid://128134715079558')
+local tab2 = window.new_tab('rbxassetid://78776334158941')
+local tab3 = window.new_tab('rbxassetid://105674725245337')
 
 -- // Sections \\ --
-local section = tab.new_section('Bruh XD')
-local section1 = tab.new_section(':DDD HI')
+local section = tab.new_section('Exploits')
+local section1 = tab1.new_section('Combat')
+local section2 = tab2.new_section('Visuals')
+local section3 = tab3.new_section('Settings')
 
 -- // Sector \\ --
-local sector = section.new_sector('OK', 'Left')
-local sector1 = section.new_sector('BRUHHHH', 'Right')
+local sector = section.new_sector('Fly', 'Left')
+local sector1 = section.new_sector('Inventory View', 'Right')
+local sector2 = section1.new_sector('Aimbot', 'Left')
+local sector3 = section1.new_sector('Silent Aim', 'Right')
+local sector4 = section2.new_sector('Esp', 'Left')
+local sector5 = section3.new_sector('Menu', 'Left')
+local sector5 = section3.new_sector('Settings', 'Right')
+local sector6 = section.new_sector('Fullbright', 'Left')
 
 -- // Elements \\ -- (Type, Name, State, Callback)
-local button = sector.element('Button', 'Button', nil, function()
+
+local button = sector.element('Button', 'Press F2', nil, function()
 
 end)
 
-local toggle = sector.element('Toggle', 'Toggle', false, function(v)
+local button = sector1.element('Button', 'Press F3', nil, function()
+
+end)
+
+local button = sector4.element('Button', 'Press F4', nil, function()
+
+end)
+
+
+local button = sector2.element('Button', 'Press F5', nil, function()
+
+end)
+
+local toggle = sector.element('Toggle', 'Enable', false, function(v)
    print(v.Toggle) -- :nerd:
 end)
+
+local toggle = sector1.element('Toggle', 'Enable', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+local toggle = sector2.element('Toggle', 'Enable', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+local toggle = sector3.element('Toggle', 'Enable', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+local toggle = sector4.element('Toggle', 'Enable', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+local slider = sector4.element('Slider', 'Max Distance', {default = {min = 0, max = 2000, default = 0}}, function(v)
+   print(v.Slider)
+end)
+
+local toggle = sector4.element('Toggle', 'Box', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
 toggle:add_color({Color = Color3.fromRGB(84, 101, 255)}, nil, function(v)
    print(v.Color)    
 end)
 
-local dropdown = sector.element('Dropdown', 'Dropdown', {options = {'one', 'two', 'three'}}, function(v)
-   print(v.Dropdown)
+local toggle = sector4.element('Toggle', 'Name', false, function(v)
+   print(v.Toggle) -- :nerd:
 end)
 
-local slider = sector.element('Slider', 'Slider', {default = {min = 1, max = 100, default = 50}}, function(v)
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Distance', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Weapon', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Health Bar', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(53, 230, 112)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Armour Bar', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(57, 118, 250)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Grave Esp', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector4.element('Toggle', 'Car Esp', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
+local toggle = sector6.element('Toggle', 'Enable', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+
+local slider = sector2.element('Slider', 'Fov Radious', {default = {min = 100, max = 500, default = 100}}, function(v)
    print(v.Slider)
 end)
 
-local combo = sector.element('Combo', 'Combo', {options = {'bruh', 'otherbruh'}}, function(v)
-   table.foreach(v.Combo, print)
+local slider = sector2.element('Slider', 'Max Distance', {default = {min = 100, max = 2000, default = 100}}, function(v)
+   print(v.Slider)
+end)
+
+local slider = sector3.element('Slider', 'Smoothness', {default = {min = 0, max = 10, default = 0}}, function(v)
+   print(v.Slider)
+end)
+
+local slider = sector3.element('Slider', 'Fov Radious', {default = {min = 100, max = 500, default = 100}}, function(v)
+   print(v.Slider)
+end)
+
+local slider = sector3.element('Slider', 'Max Distance', {default = {min = 100, max = 2000, default = 100}}, function(v)
+   print(v.Slider)
+end)
+
+local dropdown = sector2.element('Dropdown', 'Aim Target', {options = {'Head', 'Torso', 'LowerTorso'}}, function(v)
+   print(v.Dropdown)
+end)
+
+local dropdown = sector3.element('Dropdown', 'Aim Target', {options = {'Head', 'Torso', 'LowerTorso'}}, function(v)
+   print(v.Dropdown)
 end)
