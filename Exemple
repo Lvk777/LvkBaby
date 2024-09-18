@@ -100,7 +100,7 @@ toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
    print(v.Color)    
 end)
 
-local toggle = sector4.element('Toggle', 'Health Bar', false, function(v)
+local toggle = sector4.element('Toggle', 'Health', false, function(v)
    print(v.Toggle) -- :nerd:
 end)
 
@@ -108,7 +108,7 @@ toggle:add_color({Color = Color3.fromRGB(53, 230, 112)}, nil, function(v)
    print(v.Color)    
 end)
 
-local toggle = sector4.element('Toggle', 'Armour Bar', false, function(v)
+local toggle = sector4.element('Toggle', 'Armour', false, function(v)
    print(v.Toggle) -- :nerd:
 end)
 
