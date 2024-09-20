@@ -84,6 +84,14 @@ toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
    print(v.Color)    
 end)
 
+local toggle = sector4.element('Toggle', 'Line', false, function(v)
+   print(v.Toggle) -- :nerd:
+end)
+
+toggle:add_color({Color = Color3.fromRGB(217, 218, 222)}, nil, function(v)
+   print(v.Color)    
+end)
+
 local toggle = sector4.element('Toggle', 'Distance', false, function(v)
    print(v.Toggle) -- :nerd:
 end)
