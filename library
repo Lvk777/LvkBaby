@@ -1,3 +1,32 @@
+local library = {}
+
+local TweenService = game:GetService("TweenService")
+function library:tween(...) TweenService:Create(...):Play() end
+
+local uis = game:GetService("UserInputService")
+
+function library:create(Object, Properties, Parent)
+    local Obj = Instance.new(Object)
+
+    for i,v in pairs (Properties) do
+        Obj[i] = v
+    end
+    if Parent ~= nil then
+        Obj.Parent = Parent
+    end
+
+    return Obj
+end
+
+local text_service = game:GetService("TextService")
+function library:get_text_size(...)
+    return text_service:GetTextSize(...)
+end
+
+function library:console(func)
+    func(("\n"):rep(57))
+end
+
 library.signal = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvk777/LvkBaby/main/Signal"))()
 
 local local_player = game:GetService("Players").LocalPlayer
